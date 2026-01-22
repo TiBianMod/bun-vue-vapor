@@ -15,4 +15,5 @@ bun dev
 Visit: `http://localhost:3000`
 
 > code starts on `src/index.ts:7`
-> i have some comments so you can follow the workflow
+
+> i have some comments so you can follow easy the workflow.
