@@ -6,6 +6,7 @@ const server = Bun.serve({
     routes: {
         "/": async () => {
             // at this point the plugin inside `src/preload.ts` is called
+            // and will transform the `tsx` file
             const { Home } = await import("./pages/home.tsx");
 
             // at this point we need the results from
@@ -14,7 +15,7 @@ const server = Bun.serve({
             console.log(Home);
             console.log("------------------------------------------------");
 
-            // WIP: next step, after resolving the issues until here
+            // WIP: next step
             return new Response("HOME");
         },
     },
