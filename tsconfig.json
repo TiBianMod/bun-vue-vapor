@@ -6,6 +6,7 @@
     "module": "Preserve",
     "moduleDetection": "force",
     "jsx": "preserve",
+    "jsxImportSource": "vue-jsx-vapor",
     "allowJs": true,
 
     // Bundler mode
