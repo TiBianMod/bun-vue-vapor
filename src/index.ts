@@ -1,4 +1,6 @@
 // import { createViteServer } from "./helpers/create_vite_server.js";
+import { renderToString } from "@vue/server-renderer";
+import { createVaporApp } from "vue";
 
 const server = Bun.serve({
     port: 3000,
@@ -11,12 +13,18 @@ const server = Bun.serve({
 
             // at this point we need the results from
             // `@vue-jsx-vapor/compiler-rs` -> transform
-            console.log("# OUTPUT");
+            console.log("# OUTPUT - ALL GOOD");
             console.log(Home);
             console.log("------------------------------------------------");
 
-            // WIP: next step
-            return new Response("HOME");
+            const app = createVaporApp(Home, {});
+            const html = await renderToString(app);
+
+            return new Response(html, {
+                headers: {
+                    "Content-Type": "text/html",
+                },
+            });
         },
     },
 });

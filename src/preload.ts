@@ -9,7 +9,6 @@ plugin({
         build.onLoad({ filter: /\.(jsx|tsx)$/ }, async ({ path }) => {
             console.log("# BUN::TSX::Plugin");
             console.log("# TRANSFORM: ", path);
-            console.log("------------------------------------------------");
 
             // Transpile a JavaScript or TypeScript into a target
             // ECMAScript version using `oxc-transform`
@@ -21,7 +20,13 @@ plugin({
             // Transform JSX using `@vue-jsx-vapor/compiler-rs`
             const result = jsxTransform(code, {
                 filename: path,
+                ssr: true,
+                runtimeModuleName: "vue-jsx-vapor",
             });
+
+            console.log("# RESULT");
+            console.log(result.code);
+            console.log("------------------------------------------------");
 
             return { contents: result.code, loader: "js" };
         });

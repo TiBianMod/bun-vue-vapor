@@ -1,13 +1,19 @@
 import { defineVaporComponent } from "vue";
 
-export const Home = defineVaporComponent({
-    name: "Home",
-    render() {
-        return (
-            <main>
-                <h3>Title</h3>
-                <div>Home Page</div>
-            </main>
-        );
-    },
+interface HomeProps {
+    name?: string;
+    age?: number;
+}
+
+export const Home = defineVaporComponent(() => {
+    return (
+        <main>
+            <h3>Lorem ipsum dolor sit amet!</h3>
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, obcaecati.
+                Corrupti asperiores fugit, voluptatibus sint provident explicabo, similique natus
+                eius ut illum labore quas libero? Vel iusto nam blanditiis magnam.
+            </div>
+        </main>
+    );
 });
