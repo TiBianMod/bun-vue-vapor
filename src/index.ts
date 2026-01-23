@@ -13,7 +13,7 @@ const server = Bun.serve({
 
             // at this point we need the results from
             // `@vue-jsx-vapor/compiler-rs` -> transform
-            console.log("# OUTPUT - ALL GOOD");
+            console.log("# OUTPUT");
             console.log(Home);
             console.log("------------------------------------------------");
 
