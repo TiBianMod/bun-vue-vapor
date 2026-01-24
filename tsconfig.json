@@ -11,9 +11,9 @@
 
         "paths": {
             "vue": ["./node_modules/vue/dist/vue.runtime-with-vapor.esm-browser.js"],
-            // "/vue-jsx-vapor/ssr": ["./node_modules/@vue-jsx-vapor/runtime/dist/ssr.js"],
-            // "/vue-jsx-vapor/vapor": ["./node_modules/@vue-jsx-vapor/runtime/dist/vapor.js"],
-            // "/vue-jsx-vapor/vdom": ["./node_modules/@vue-jsx-vapor/runtime/dist/vdom.js"],
+            "/vue-jsx-vapor/ssr": ["./node_modules/@vue-jsx-vapor/runtime/dist/ssr.js"],
+            "/vue-jsx-vapor/vapor": ["./node_modules/@vue-jsx-vapor/runtime/dist/vapor.js"],
+            "/vue-jsx-vapor/vdom": ["./node_modules/@vue-jsx-vapor/runtime/dist/vdom.js"],
         },
 
         // Bundler mode
