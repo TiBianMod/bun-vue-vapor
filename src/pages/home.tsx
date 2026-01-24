@@ -1,10 +1,5 @@
 import { defineVaporComponent } from "vue";
 
-interface HomeProps {
-    name?: string;
-    age?: number;
-}
-
 export const Home = defineVaporComponent(() => {
     return (
         <main>

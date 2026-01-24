@@ -17,7 +17,7 @@ const server = Bun.serve({
             console.log(Home);
             console.log("------------------------------------------------");
 
-            const app = createVaporApp(Home, {});
+            const app = createVaporApp(Home, { class: ["p-4 flex"] });
             const html = await renderToString(app);
 
             return new Response(html, {

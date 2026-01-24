@@ -12,6 +12,6 @@
         "typescript": "^5.9.3",
         "vite": "^7.3.1",
         "vue": "^3.6.0-beta.4",
-        "vue-jsx-vapor": "^3.1.14"
+        "vue-jsx-vapor": "^3.1.15"
     }
 }
