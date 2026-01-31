@@ -10,9 +10,11 @@ plugin({
             console.log("# BUN::TSX::Plugin");
             console.log("# TRANSFORM: ", path);
 
+            const source = await Bun.file(path).text();
+
             // Transpile a JavaScript or TypeScript into a target
             // ECMAScript version using `oxc-transform`
-            const { code } = await transform(path, await Bun.file(path).text(), {
+            const { code } = await transform(path, source, {
                 jsx: "preserve",
                 lang: "tsx",
             });
