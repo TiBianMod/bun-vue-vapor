@@ -1,4 +1,4 @@
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import type { ButtonHTMLAttributes } from "vue-jsx-vapor";
 
 interface ButtonProps extends ButtonHTMLAttributes<{}> {
@@ -7,7 +7,12 @@ interface ButtonProps extends ButtonHTMLAttributes<{}> {
 
 export const Button = defineComponent<ButtonProps>({
     name: "Button",
-    render() {
-        return <button>+</button>;
+    setup() {
+        const foo = ref("4453");
+
+        return { foo };
+    },
+    render(data, props) {
+        return <button>Value: {data.foo}</button>;
     },
 });
