@@ -1,7 +1,8 @@
-import { defineVaporComponent } from "vue";
+import { defineComponent } from "vue";
+import { Button } from "../components/button.js";
 
-export const Home = defineVaporComponent(() => {
-    return (
+export const Home = defineComponent(() => {
+    return () => (
         <main>
             <h3>Lorem ipsum dolor sit amet!</h3>
             <div>
@@ -9,6 +10,8 @@ export const Home = defineVaporComponent(() => {
                 Corrupti asperiores fugit, voluptatibus sint provident explicabo, similique natus
                 eius ut illum labore quas libero? Vel iusto nam blanditiis magnam.
             </div>
+
+            <Button />
         </main>
     );
 });

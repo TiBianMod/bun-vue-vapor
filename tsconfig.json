@@ -9,9 +9,9 @@
         "jsxImportSource": "vue-jsx-vapor",
         "allowJs": true,
 
-        "paths": {
-            "vue": ["./node_modules/vue/dist/vue.runtime-with-vapor.esm-browser.js"],
-        },
+        // "paths": {
+        //     "vue": ["./node_modules/vue/dist/vue.runtime-with-vapor.esm-browser.js"],
+        // },
 
         // Bundler mode
         "moduleResolution": "bundler",

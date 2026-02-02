@@ -1,6 +1,6 @@
 // import { createViteServer } from "./helpers/create_vite_server.js";
 import { renderToString } from "@vue/server-renderer";
-import { createVaporSSRApp } from "vue";
+import { createSSRApp } from "vue";
 
 const server = Bun.serve({
     port: 3000,
@@ -17,7 +17,7 @@ const server = Bun.serve({
             console.log(Home);
             console.log("------------------------------------------------");
 
-            const app = createVaporSSRApp(Home, { class: ["p-4 flex"] });
+            const app = createSSRApp(Home, { class: ["p-4 flex"] });
             const html = await renderToString(app);
 
             return new Response(html, {
