@@ -1,11 +1,8 @@
 import { plugin } from "bun";
 import { transform } from "oxc-transform";
 import { transform as jsxTransform } from "@vue-jsx-vapor/compiler-rs";
-import { transform as babelTransform } from "@babel/core";
-import vueJsx from "@vue/babel-plugin-jsx";
 import type { PluginBuilder } from "bun";
 import type { BabelFileResult } from "@babel/core";
-import type { VueJSXPluginOptions } from "@vue/babel-plugin-jsx";
 
 plugin({
     name: "BUN::TSX::Plugin",
@@ -32,12 +29,14 @@ plugin({
             });
 
             // Transform JSX using `babel`
+            // const { transform: babelTransform } = await import("@babel/core");
+            // const { default: vueJsx } = await import("@vue/babel-plugin-jsx");
             // const result = babelTransform(code, {
             //     babelrc: false,
             //     configFile: false,
             //     filename: path,
             //     sourceMaps: false,
-            //     plugins: [[vueJsx, {} satisfies VueJSXPluginOptions]],
+            //     plugins: [[vueJsx, {}]],
             // }) as BabelFileResult;
 
             console.log("# RESULT");
